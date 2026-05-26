@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>国家未来产业每日晨报 · 2026年5月26日</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --orange:#f97316;--red:#ef4444;--green:#16a34a;--blue:#2563eb;
+  --dark:#0f172a;--card-bg:#fff;--bg:#f1f5f9;--text:#1e293b;--muted:#64748b;
+  --radius:12px;--shadow:0 1px 3px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.04);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);min-height:100vh}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 40%,#4c1d95 70%,#7c3aed 100%);
+  color:#fff;padding:3rem 0 2rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hero-tag{display:inline-block;background:rgba(255,255,255,.15);padding:.25rem .8rem;
+  border-radius:20px;font-size:.75rem;letter-spacing:.05em;margin-bottom:.8rem}
+.hero h1{font-size:2rem;font-weight:700;margin-bottom:.4rem}
+.hero-sub{font-size:.9rem;opacity:.75;margin-bottom:1.5rem}
+.hero-stats{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-num{font-size:1.75rem;font-weight:700;line-height:1}
+.stat-label{font-size:.7rem;opacity:.65;margin-top:.2rem}
+
+/* NAV */
+.nav{background:rgba(15,23,42,.95);backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:100;overflow-x:auto}
+.nav-inner{display:flex;gap:0;max-width:1200px;margin:0 auto;padding:0 1rem}
+.nav a{color:rgba(255,255,255,.7);padding:.7rem .9rem;font-size:.78rem;white-space:nowrap;
+  border-bottom:2px solid transparent;transition:all .2s}
+.nav a:hover{color:#fff;border-color:var(--orange);text-decoration:none}
+
+/* MAIN */
+main{max-width:1200px;margin:0 auto;padding:1.5rem 1rem 3rem}
+
+/* SECTION HEADER */
+.section-header{display:flex;align-items:center;justify-content:space-between;
+  padding:.75rem 1rem;border-radius:var(--radius) var(--radius) 0 0;margin-bottom:1rem}
+.section-header h2{font-size:1rem;font-weight:600}
+.count-badge{font-size:.72rem;padding:.2rem .6rem;border-radius:12px;font-weight:500}
+
+/* CARD GRID */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem;margin-bottom:1.5rem}
+.card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:1rem 1.1rem;display:flex;gap:.75rem;border-left:3px solid var(--accent,#4f46e5);
+  transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.card-num{font-size:1.1rem;font-weight:700;color:var(--accent,#4f46e5);opacity:.4;
+  flex-shrink:0;min-width:24px;line-height:1.3}
+.card-title{font-size:.88rem;font-weight:600;line-height:1.45;margin-bottom:.4rem}
+.card-title a:hover{color:var(--accent,#4f46e5)}
+.card-summary{font-size:.78rem;color:var(--muted);line-height:1.6;margin-bottom:.4rem}
+.card-meta{font-size:.7rem;color:#94a3b8;display:flex;gap:.5rem;flex-wrap:wrap}
+
+/* LOCAL SECTION */
+.local-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1rem;margin-bottom:1.5rem}
+.local-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:1rem 1.1rem;border-left:3px solid var(--green);transition:transform .15s}
+.local-card:hover{transform:translateY(-2px)}
+.local-meta{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap;margin-bottom:.5rem}
+.tag-region{background:#dcfce7;color:#16a34a;font-size:.68rem;padding:.15rem .5rem;border-radius:10px;font-weight:600}
+.tag-type{background:#e0f2fe;color:#0284c7;font-size:.68rem;padding:.15rem .5rem;border-radius:10px}
+.local-date{font-size:.68rem;color:#94a3b8;margin-left:auto}
+.local-title{font-size:.88rem;font-weight:600;line-height:1.45;margin-bottom:.4rem}
+.local-title a:hover{color:var(--green)}
+.local-detail{font-size:.78rem;color:var(--muted);line-height:1.6;margin-bottom:.4rem}
+.local-src{font-size:.7rem;color:#94a3b8}
+.local-src a:hover{color:var(--green)}
+
+/* TOPIC CARDS */
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.8rem;margin-bottom:1rem}
+.topic-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:.9rem 1rem}
+.topic-meta{display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:.5rem;align-items:center}
+.tag-domain{font-size:.66rem;padding:.15rem .45rem;border-radius:8px;font-weight:500}
+.tag-urgency{font-size:.66rem;padding:.1rem .4rem;border-radius:8px;border:1px solid;margin-left:auto}
+.topic-title{font-size:.83rem;font-weight:600;line-height:1.45;margin-bottom:.45rem}
+.topic-suggest{font-size:.75rem;color:#7c3aed;background:#f5f3ff;padding:.4rem .6rem;border-radius:6px;line-height:1.5}
+
+/* TOPIC GROUP HEADERS */
+.topic-group-header{display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem;padding-bottom:.4rem;border-bottom:1px solid #e2e8f0}
+.topic-group-icon{font-size:1.1rem}
+.topic-group-name{font-size:.85rem;font-weight:600;color:var(--text)}
+.topic-group-count{font-size:.72rem;color:var(--muted);margin-left:auto}
+
+[data-aos]{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
+[data-aos].visible{opacity:1;transform:none}
+.empty{color:#94a3b8;font-size:.82rem;padding:1rem 0;text-align:center}
+.section-wrapper{margin-bottom:2rem}
+
+/* LOCAL section header */
+.local-header{background:linear-gradient(135deg,#dcfce7,#d1fae5);border-left:4px solid var(--green)}
+.local-header h2{color:#15803d}
+.local-header .count-badge{background:#d1fae5;color:#15803d}
+
+/* TOPIC section header */
+.topic-header{background:linear-gradient(135deg,#ede9fe,#ddd6fe);border-left:4px solid #7c3aed}
+.topic-header h2{color:#5b21b6}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-tag">🏛️ 中国信通院 · 未来产业研究</div>
+  <h1>国家未来产业每日晨报</h1>
+  <div class="hero-sub">2026年5月26日 周二 · 更新于 11:09 · AI 智能聚合</div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num" style="color:#4ade80">10</div><div class="stat-label">地方动态</div></div>
+    <div class="stat"><div class="stat-num" style="color:#fbbf24">11</div><div class="stat-label">选题参考</div></div>
+    <div class="stat"><div class="stat-num" style="color:#f87171">2</div><div class="stat-label">政策专报</div></div>
+    <div class="stat"><div class="stat-num" style="color:#60a5fa">8</div><div class="stat-label">国际视野</div></div>
+    <div class="stat"><div class="stat-num" style="color:#c084fc">28</div><div class="stat-label">领域资讯</div></div>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#local">🗺️ 地方动态</a>
+    <a href="#topic">📝 选题参考</a>
+    <a href="#policy">📋 政策专报</a>
+    <a href="#intl">🌍 国际视野</a>
+    <a href="#domain-未来信息">💡 未来信息</a>
+    <a href="#domain-未来制造">⚙️ 未来制造</a>
+    <a href="#domain-未来材料">🔬 未来材料</a>
+    <a href="#domain-未来能源">⚡ 未来能源</a>
+    <a href="#domain-未来空间">🚀 未来空间</a>
+    <a href="#domain-未来健康">🧬 未来健康</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 地方动态 -->
+  <section id="local" class="section-wrapper" data-aos>
+    <div class="section-header local-header">
+      <h2>🗺️ 各地未来产业培育动态</h2>
+      <span class="count-badge" style="background:#dcfce7;color:#16a34a">10 条</span>
+    </div>
+    <div class="local-grid">
+    <div class="local-card">
+      <div class="local-meta">
+        <span class="tag-region">工信部</span>
+        <span class="tag-type">部长署名</span>
+        <span class="local-date">2026-05-20</span>
+      </div>
+      <div class="local-title"><a href="https://www.miit.gov.cn" target="_blank" rel="noopener">工信部部长李乐成：未来产业处于孕育突破重要窗口期</a></div>
+      <div class="local-detail">在《求是》杂志发表署名文章，指出要聚焦六大方向，加快形成新质生产力，推动制造强国建设。</div>
+      <div class="local-src"><a href="https://www.miit.gov.cn" target="_blank" rel="noopener">🔗 工信部官网</a></div>
+    </div>
+    <div class="local-card">
+      <div class="local-meta">
+        <span class="tag-region">北京</span>
+        <span class="tag-type">先导区建设</span>
+        <span class="local-date">2026-05-15</span>
+      </div>
+      <div class="local-title"><a href="https://www.beijing.gov.cn" target="_blank" rel="noopener">北京亦庄国家级未来产业先导区召开重点工作推进会</a></div>
+      <div class="local-detail">聚焦具身智能、商业航天、生物制造三大赛道，已集聚企业超200家，2026年目标产值突破500亿元。</div>
+      <div class="local-src"><a href="https://www.beijing.gov.cn" target="_blank" rel="noopener">🔗 北京市政府</a></div>
+    </div>
+    <div class="local-card">
+      <div class="local-meta">
+        <span class="tag-region">民建中央</span>
+        <span class="tag-type">专项调研</span>
+        <span class="local-date">2026-05-10</span>
+      </div>
+      <div class="local-title"><a href="http://www.minzhongyang.org.cn" target="_blank" rel="noopener">民建中央赴多省调研：未来产业培育面临资金、人才、标准三大瓶颈</a></div>
+      <div class="local-detail">调研指出地方普遍存在产业认定标准不统一、国家级先导区政策落地慢、高端人才引进难等问题，建议尽快出台国家统一认定标准。</div>
+      <div class="local-src"><a href="http://www.minzhongyang.org.cn" target="_blank" rel="noopener">🔗 民建中央</a></div>
+    </div>
+    <div class="local-card">
+      <div class="local-meta">
+        <span class="tag-region">合肥</span>
+        <span class="tag-type">量子产业第一</span>
+        <span class="local-date">2026-04-22</span>
+      </div>
+      <div class="local-title"><a href="https://www.hefei.gov.cn" target="_blank" rel="noopener">合肥量子产业全国领先：近90家量子企业、先导区产值超800亿</a></div>
+      <div class="local-detail">合肥量子信息产业规模全国第一，量子通信网络覆盖全市，量子计算云平台用户超5万。</div>
+      <div class="local-src"><a href="https://www.hefei.gov.cn" target="_blank" rel="noopener">🔗 合肥市政府</a></div>
+    </div>
+    <div class="local-card">
+      <div class="local-meta">
+        <span class="tag-region">成都</span>
+        <span class="tag-type">量子新布局</span>
+        <span class="local-date">2026-04-18</span>
+      </div>
+      <div class="local-title"><a href="https://www.chengdu.gov.cn" target="_blank" rel="noopener">成都金牛区发布量子科技行动计划（2026-2028）</a></div>
+      <div class="local-detail">三年内引进量子企业50家、培育上市企业3家，建设全国重要量子产业集聚区，总投入超50亿元。</div>
+      <div class="local-src"><a href="https://www.chengdu.gov.cn" target="_blank" rel="noopener">🔗 成都市政府</a></div>
+    </div>
+    <div class="local-card">
+      <div class="local-meta">
+        <span class="tag-region">上海</span>
+        <span class="tag-type">基金与集聚</span>
+        <span class="local-date">2026-04-10</span>
+      </div>
+      <div class="local-title"><a href="https://www.shanghai.gov.cn" target="_blank" rel="noopener">上海150亿未来产业基金完成首批23只子基金布局</a></div>
+      <div class="local-detail">重点投向脑机接口、量子科技、合成生物学，已撬动社会资本超400亿元，在沪注册未来产业企业达1200余家。</div>
+      <div class="local-src"><a href="https://www.shanghai.gov.cn" target="_blank" rel="noopener">🔗 上海市政府</a></div>
+    </div>
+    <div class="local-card">
+      <div class="local-meta">
+        <span class="tag-region">深圳</span>
+        <span class="tag-type">立法保障</span>
+        <span class="local-date">2026-04-01</span>
+      </div>
+      <div class="local-title"><a href="https://www.sz.gov.cn" target="_blank" rel="noopener">深圳率全国之先为未来产业立法，《深圳市未来产业促进条例》正式实施</a></div>
+      <div class="local-detail">条例明确未来产业认定标准、财政支持方式、容错免责机制，为企业提供制度保障。</div>
+      <div class="local-src"><a href="https://www.sz.gov.cn" target="_blank" rel="noopener">🔗 深圳市政府</a></div>
+    </div>
+    <div class="local-card">
+      <div class="local-meta">
+        <span class="tag-region">重庆</span>
+        <span class="tag-type">先导区认定</span>
+        <span class="local-date">2026-03-31</span>
+      </div>
+      <div class="local-title"><a href="https://jjxxw.cq.gov.cn" target="_blank" rel="noopener">重庆认定第二批5个市级未来产业先导区</a></div>
+      <div class="local-detail">涵盖智能网联汽车、生物医药、人工智能、卫星互联网、氢能五大赛道，新增市级专项支持资金10亿元。</div>
+      <div class="local-src"><a href="https://jjxxw.cq.gov.cn" target="_blank" rel="noopener">🔗 重庆市政府</a></div>
+    </div>
+    <div class="local-card">
+      <div class="local-meta">
+        <span class="tag-region">浙江</span>
+        <span class="tag-type">省级规划</span>
+        <span class="local-date">2026-03-20</span>
+      </div>
+      <div class="local-title"><a href="https://www.zhejiang.gov.cn" target="_blank" rel="noopener">浙江布局9大未来产业：首批确定量子、生命科学等重点赛道</a></div>
+      <div class="local-detail">出台未来产业培育三年行动计划，建立省级未来产业先导区认定机制，首批创建园区6个。</div>
+      <div class="local-src"><a href="https://www.zhejiang.gov.cn" target="_blank" rel="noopener">🔗 浙江省政府</a></div>
+    </div>
+    <div class="local-card">
+      <div class="local-meta">
+        <span class="tag-region">江苏</span>
+        <span class="tag-type">氢能突破</span>
+        <span class="local-date">2026-02-25</span>
+      </div>
+      <div class="local-title"><a href="https://www.jiangsu.gov.cn" target="_blank" rel="noopener">江苏氢能专利申请量连续三年全国第一</a></div>
+      <div class="local-detail">全省氢能相关企业超300家，南京、苏州氢能产业集群加速形成，2025年产业规模达600亿元。</div>
+      <div class="local-src"><a href="https://www.jiangsu.gov.cn" target="_blank" rel="noopener">🔗 江苏省政府</a></div>
+    </div></div>
+  </section>
+
+  <!-- 选题参考 -->
+  <section id="topic" class="section-wrapper" data-aos>
+    <div class="section-header topic-header">
+      <h2>📝 政务信息选题参考</h2>
+      <span class="count-badge" style="background:#ede9fe;color:#7c3aed">11 条</span>
+    </div>
+    <div style="margin-bottom:1rem">
+      <div class="topic-group-header">
+        <span class="topic-group-icon">🔥</span>
+        <span class="topic-group-name">热点选题</span>
+        <span class="topic-group-count">1天内出稿 · 保院采冲部采</span>
+      </div>
+      <div class="topic-grid">
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span><span class="tag-urgency" style="color:#ef4444;border-color:#ef4444">1天内出稿</span></div>
+      <div class="topic-title"><a href="https://fortune.com/2026/05/22/microsoft-ai-cost-problem-tokens-agents" target="_blank" rel="noopener">微软称，使用人工智能的成本高于支付人工工资</a></div>
+      <div class="topic-suggest">💬 建议标题：《发布、部署最新动向及对我国的影响》</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span><span class="tag-urgency" style="color:#ef4444;border-color:#ef4444">1天内出稿</span></div>
+      <div class="topic-title"><a href="https://www.dataguidance.com/news/eu-commission-publishes-draft-guidelines-classifying" target="_blank" rel="noopener">欧盟委员会发布《欧盟人工智能法》高风险AI系统分类指导草案并开启公众咨询</a></div>
+      <div class="topic-suggest">💬 建议标题：《发布、部署最新动向及对我国的影响》</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span> <span class="tag-domain" style="background:#0891b222;color:#0891b2">⚙️未来制造</span><span class="tag-urgency" style="color:#ef4444;border-color:#ef4444">1天内出稿</span></div>
+      <div class="topic-title"><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture" target="_blank" rel="noopener">OpenAI模型证伪了离散几何中的一个核心猜想</a></div>
+      <div class="topic-suggest">💬 建议标题：《突破、OpenAI最新动向及对我国的影响》</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span><span class="tag-urgency" style="color:#ef4444;border-color:#ef4444">1天内出稿</span></div>
+      <div class="topic-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection" target="_blank" rel="noopener">Google I/O 2026</a></div>
+      <div class="topic-suggest">💬 建议标题：《发布、Google最新动向及对我国的影响》</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span><span class="tag-urgency" style="color:#ef4444;border-color:#ef4444">1天内出稿</span></div>
+      <div class="topic-title"><a href="https://twitter.com/karpathy/status/2056753169888334312" target="_blank" rel="noopener">安德烈·卡帕西加入Anthropic</a></div>
+      <div class="topic-suggest">💬 建议标题：《发布、OpenAI最新动向及对我国的影响》</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span><span class="tag-urgency" style="color:#ef4444;border-color:#ef4444">1天内出稿</span></div>
+      <div class="topic-title"><a href="https://x.com/kimmonismus/status/2058997271803674991" target="_blank" rel="noopener">苹果据称正使用定制版1.2T参数Google模型重塑下一代Siri</a></div>
+      <div class="topic-suggest">💬 建议标题：《发布、Google最新动向及对我国的影响》</div>
+    </div></div>
+    </div>
+    <div style="margin-bottom:1rem">
+      <div class="topic-group-header">
+        <span class="topic-group-icon">🎯</span>
+        <span class="topic-group-name">战略选题</span>
+        <span class="topic-group-count">季度重点 · 冲击部采/办采</span>
+      </div>
+      <div class="topic-grid">
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span> <span class="tag-domain" style="background:#0891b222;color:#0891b2">⚙️未来制造</span><span class="tag-urgency" style="color:#4f46e5;border-color:#4f46e5">季度重点</span></div>
+      <div class="topic-title"><a href="https://www.ithome.com/0/952/354.htm" target="_blank" rel="noopener">地平线开源 HoloMotion-1 4 亿参数机器人小脑大模型，可实现舞蹈、健身、搬箱子等动作</a></div>
+      <div class="topic-suggest">💬 建议方向：深度分析地平线开源 HoloMotio背后的技术趋势与政策机遇</div>
+    </div></div>
+    </div>
+    <div>
+      <div class="topic-group-header">
+        <span class="topic-group-icon">📦</span>
+        <span class="topic-group-name">储备选题</span>
+        <span class="topic-group-count">持续跟踪 · 有信号即启动</span>
+      </div>
+      <div class="topic-grid">
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span><span class="tag-urgency" style="color:#6b7280;border-color:#6b7280">持续跟踪</span></div>
+      <div class="topic-title"><a href="https://www.theverge.com/news/936945/pope-leo-letter-encyclical-ai-anthropic-labor-warfare" target="_blank" rel="noopener">教皇里奥呼吁在AI时代保持&quot;深刻的人性&quot;</a></div>
+      <div class="topic-suggest">💬 可作为储备选题，持续跟踪后续进展</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span><span class="tag-urgency" style="color:#6b7280;border-color:#6b7280">持续跟踪</span></div>
+      <div class="topic-title"><a href="https://github.com/anomalyco/models.dev" target="_blank" rel="noopener">Models.dev：一个关于人工智能模型规格、定价和功能的开源数据库</a></div>
+      <div class="topic-suggest">💬 可作为储备选题，持续跟踪后续进展</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span> <span class="tag-domain" style="background:#0891b222;color:#0891b2">⚙️未来制造</span><span class="tag-urgency" style="color:#6b7280;border-color:#6b7280">持续跟踪</span></div>
+      <div class="topic-title"><a href="https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap" target="_blank" rel="noopener">回顾Google I/O 2026对话环节</a></div>
+      <div class="topic-suggest">💬 可作为储备选题，持续跟踪后续进展</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-meta"><span class="tag-domain" style="background:#4f46e522;color:#4f46e5">💡未来信息</span><span class="tag-urgency" style="color:#6b7280;border-color:#6b7280">持续跟踪</span></div>
+      <div class="topic-title"><a href="https://www.ithome.com/0/953/832.htm" target="_blank" rel="noopener">DeepSeek 推进 700 亿元融资，梁文锋承诺坚持开发开源 AI 模型而非追求短期商业化目标</a></div>
+      <div class="topic-suggest">💬 可作为储备选题，持续跟踪后续进展</div>
+    </div></div>
+    </div>
+  </section>
+
+  <!-- 政策专报 -->
+  <section id="policy" class="section-wrapper" data-aos>
+    <div class="section-header" style="background:linear-gradient(135deg,#fce7f322,#fce7f311);border-left:4px solid #be185d">
+      <h2>📋 政策专报</h2>
+      <span class="count-badge" style="background:#fce7f3;color:#be185d">2 条</span>
+    </div>
+    <div class="card-grid">
+    <div class="card" style="--accent:#be185d">
+      <div class="card-num">01</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://techcrunch.com/2026/05/20/intuit-to-lay-off-over-3000-employees-to-refocus-on-ai" target="_blank" rel="noopener">Intuit将裁员逾3000人，以重新聚焦人工智能</a></div>
+        <div class="card-summary">软件公司Intuit宣布将裁员超过3000人，作为其战略重组的一部分。此次裁员旨在将公司资源重新聚焦于人工智能（AI）领域的发展，以适应技术趋势并提升长期竞争力。裁员规模约占其全球员工总数的10%。…</div>
+        <div class="card-meta"><span>Hacker News 热门（buzzing.cc 中文翻译）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#be185d">
+      <div class="card-num">02</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.ithome.com/0/954/126.htm" target="_blank" rel="noopener">国家发改委：加快具身智能训练基础设施建设，让机器人不仅能上赛场，还能&quot;进工厂、进商场、进家庭&quot;</a></div>
+        <div class="card-summary">国家发改委在5月22日新闻发布会上表示，人形机器人在半程马拉松比赛中表现显著提升，速度更快、更灵活、更自主，参赛队伍从20余支增至百余支，完赛队伍从6支增至40余支，反映具身智能创新活力增强和产业规模扩大。下一步，发改委将加快具身智能训练基…</div>
+        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- 国际视野 -->
+  <section id="intl" class="section-wrapper" data-aos>
+    <div class="section-header" style="background:linear-gradient(135deg,#e0f2fe22,#e0f2fe11);border-left:4px solid #0891b2">
+      <h2>🌍 国际视野</h2>
+      <span class="count-badge" style="background:#e0f2fe;color:#0891b2">8 条</span>
+    </div>
+    <div class="card-grid">
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">01</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://fortune.com/2026/05/22/microsoft-ai-cost-problem-tokens-agents" target="_blank" rel="noopener">微软称，使用人工智能的成本高于支付人工工资</a></div>
+        <div class="card-summary">微软发布报告指出，在特定工作场景中，部署和使用人工智能（AI）的成本目前已高于支付相应的人工工资。报告分析了基于&quot;tokens&quot;（令牌）和&quot;agents&quot;（智能体）的AI使用模式，发现其综合开销超过了…</div>
+        <div class="card-meta"><span>Hacker News 热门（buzzing.cc 中文翻译）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">02</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap" target="_blank" rel="noopener">回顾Google I/O 2026对话环节</a></div>
+        <div class="card-summary">在2026年Google I/O开发者大会上，对话环节聚焦于未来科技趋势。行业领导者围绕人工智能、量子计算、机器人学以及创造力等核心议题展开了深入探讨，旨在勾勒这些前沿领域的技术演进路径与发展蓝图。…</div>
+        <div class="card-meta"><span>Google Blog：AI（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">03</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks" target="_blank" rel="noopener">谷歌DeepMind在亚太启动AI气候加速器</a></div>
+        <div class="card-summary">亚太地区经济增长迅速，但极易受到气候变化影响，且现有绿色技术发展速度跟不上环境风险的增长。为此，Google DeepMind宣布启动首届专注于&quot;AI for the Planet&quot;的加速器计划。该计划为期三个月，面向亚…</div>
+        <div class="card-meta"><span>Google DeepMind：Blog（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">04</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.dataguidance.com/news/eu-commission-publishes-draft-guidelines-classifying" target="_blank" rel="noopener">欧盟委员会发布《欧盟人工智能法》高风险AI系统分类指导草案并开启公众咨询</a></div>
+        <div class="card-summary">欧盟委员会于2026年5月19日发布了关于《欧盟人工智能法》第六条项下高风险AI系统分类的指导草案。该草案旨在为AI系统的提供商、部署者及市场监管机构提供明确的分类标准，以确保在欧盟范围内执法的一致性。分类主要依据AI系统的预期用途，例如作…</div>
+        <div class="card-meta"><span>DataGuidance：Artificial Intelligence（网页）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">05</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture" target="_blank" rel="noopener">OpenAI模型证伪了离散几何中的一个核心猜想</a></div>
+        <div class="card-summary">OpenAI开发的人工智能模型成功解决了数学界悬而未决逾80年的&quot;单元距离问题&quot;，并由此推翻了离散几何领域的一个核心猜想。这一突破被视作人工智能驱动数学研究的里程碑事件，标志着AI在基础科学理论探索中取得了实质性进展。该…</div>
+        <div class="card-meta"><span>OpenAI：官网动态（RSS · 排除企业/客户案例）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">06</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection" target="_blank" rel="noopener">Google I/O 2026</a></div>
+        <div class="card-summary">在Google I/O 2026大会上，Google宣布了多项旨在让AI更普惠、更实用的更新。这些发布聚焦于提升人工智能的辅助能力，使其能够服务更广泛的用户群体。大会涵盖了AI在开发者工具、用户应用以及日常生活场景中的具体改进，强调通过技术…</div>
+        <div class="card-meta"><span>Google Blog：AI（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">07</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://twitter.com/karpathy/status/2056753169888334312" target="_blank" rel="noopener">安德烈·卡帕西加入Anthropic</a></div>
+        <div class="card-summary">AI领域知名专家安德烈·卡帕西于2026年5月19日宣布加入人工智能安全公司Anthropic。卡帕西此前曾是特斯拉自动驾驶AI负责人及OpenAI联合创始人，此次加盟标志着顶尖人才向AI安全与对齐研究领域的新一轮流动，进一步提升了Anth…</div>
+        <div class="card-meta"><span>Hacker News 热门（buzzing.cc 中文翻译）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">08</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.anthropic.com/news/anthropic-kpmg" target="_blank" rel="noopener">毕马威与Anthropic建立全球联盟，全面整合Claude AI模型</a></div>
+        <div class="card-summary">毕马威宣布与Anthropic建立全球联盟，将Claude人工智能模型全面整合至其核心业务与数字平台。此举将向毕马威全球超过27.6万名员工开放Claude访问权限，并率先应用于税务与法律等领域的客户工具开发。双方还将合作开发面向私募股权投…</div>
+        <div class="card-meta"><span>Anthropic：Newsroom（网页）</span></div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- 六大领域 -->
+  
+      <section class="domain-section" id="domain-未来信息" data-aos>
+        <div class="section-header" style="background:linear-gradient(135deg,#4f46e522,#4f46e511);border-left:4px solid #4f46e5">
+          <h2>💡 未来信息</h2>
+          <span class="count-badge" style="background:#4f46e522;color:#4f46e5">23 条</span>
+        </div>
+        <div class="card-grid">
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">01</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.theverge.com/news/936945/pope-leo-letter-encyclical-ai-anthropic-labor-warfare" target="_blank" rel="noopener">教皇里奥呼吁在AI时代保持&quot;深刻的人性&quot;</a></div>
+        <div class="card-summary">教皇里奥十四世在首份重要通谕《Magnifica Humanitas》中警告了AI及不受约束的技术力量带来的风险。该通谕于2026年5月15日发布，是教皇关于&quot;在人工智能时代守护人&quot;的宣言。文件重点讨论了AI驱动战争的危…</div>
+        <div class="card-meta"><span>The Verge：AI（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">02</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://fortune.com/2026/05/22/microsoft-ai-cost-problem-tokens-agents" target="_blank" rel="noopener">微软称，使用人工智能的成本高于支付人工工资</a></div>
+        <div class="card-summary">微软发布报告指出，在特定工作场景中，部署和使用人工智能（AI）的成本目前已高于支付相应的人工工资。报告分析了基于&quot;tokens&quot;（令牌）和&quot;agents&quot;（智能体）的AI使用模式，发现其综合开销超过了…</div>
+        <div class="card-meta"><span>Hacker News 热门（buzzing.cc 中文翻译）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">03</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://github.com/anomalyco/models.dev" target="_blank" rel="noopener">Models.dev：一个关于人工智能模型规格、定价和功能的开源数据库</a></div>
+        <div class="card-summary">近期发布了开源数据库Models.dev，专门收录人工智能模型的各项规格、定价及功能信息。该项目在GitHub公开，便于开发者查询和比较不同AI模型。其在Hacker News社区获得101点关注度，显示出技术社区对这类集中化、透明化的模型…</div>
+        <div class="card-meta"><span>Hacker News 热门（buzzing.cc 中文翻译）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">04</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap" target="_blank" rel="noopener">回顾Google I/O 2026对话环节</a></div>
+        <div class="card-summary">在2026年Google I/O开发者大会上，对话环节聚焦于未来科技趋势。行业领导者围绕人工智能、量子计算、机器人学以及创造力等核心议题展开了深入探讨，旨在勾勒这些前沿领域的技术演进路径与发展蓝图。…</div>
+        <div class="card-meta"><span>Google Blog：AI（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">05</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.ithome.com/0/953/832.htm" target="_blank" rel="noopener">DeepSeek 推进 700 亿元融资，梁文锋承诺坚持开发开源 AI 模型而非追求短期商业化目标</a></div>
+        <div class="card-summary">DeepSeek正推进700亿元人民币的巨额融资，估值约450亿美元。创始人梁文锋承诺将继续开源开发AI模型，不追求短期商业化，目标是技术升级与通用人工智能。腾讯、IDG资本等接近参投，梁文锋个人可能注资200亿元。若成功将创下中国科技初创…</div>
+        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">06</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks" target="_blank" rel="noopener">谷歌DeepMind在亚太启动AI气候加速器</a></div>
+        <div class="card-summary">亚太地区经济增长迅速，但极易受到气候变化影响，且现有绿色技术发展速度跟不上环境风险的增长。为此，Google DeepMind宣布启动首届专注于&quot;AI for the Planet&quot;的加速器计划。该计划为期三个月，面向亚…</div>
+        <div class="card-meta"><span>Google DeepMind：Blog（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">07</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.wsj.com/opinion/how-i-choose-which-cloudflare-employees-to-replace-with-ai-40a197e5" target="_blank" rel="noopener">Cloudflare首席执行官谈如何决定用人工智能取代哪些员工</a></div>
+        <div class="card-summary">Cloudflare首席执行官在《华尔街日报》撰文，分享其公司用AI替代部分员工的决策逻辑。该文于2026年5月21日发布，引发了技术社区的广泛讨论，在Hacker News上获得100个点赞。…</div>
+        <div class="card-meta"><span>Hacker News 热门（buzzing.cc 中文翻译）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">08</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://techcrunch.com/2026/05/20/intuit-to-lay-off-over-3000-employees-to-refocus-on-ai" target="_blank" rel="noopener">Intuit将裁员逾3000人，以重新聚焦人工智能</a></div>
+        <div class="card-summary">软件公司Intuit宣布将裁员超过3000人，作为其战略重组的一部分。此次裁员旨在将公司资源重新聚焦于人工智能（AI）领域的发展，以适应技术趋势并提升长期竞争力。裁员规模约占其全球员工总数的10%。…</div>
+        <div class="card-meta"><span>Hacker News 热门（buzzing.cc 中文翻译）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">09</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.bbc.com/future/article/20260519-google-tackles-attempts-to-hack-its-ai-results" target="_blank" rel="noopener">谷歌的人工智能正遭到操纵。这家搜索巨头正在悄然反击</a></div>
+        <div class="card-summary">谷歌的AI系统正面临被操纵的风险。为应对这一挑战，这家科技巨头已悄然启动防御措施，以保护其AI生成内容的结果免受恶意干扰。此举旨在确保搜索和AI服务的可靠性与可信度，反映了当前人工智能安全领域日益增长的对抗性问题。谷歌在未公开宣传的情况下，…</div>
+        <div class="card-meta"><span>Hacker News 热门（buzzing.cc 中文翻译）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">10</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.dataguidance.com/news/eu-commission-publishes-draft-guidelines-classifying" target="_blank" rel="noopener">欧盟委员会发布《欧盟人工智能法》高风险AI系统分类指导草案并开启公众咨询</a></div>
+        <div class="card-summary">欧盟委员会于2026年5月19日发布了关于《欧盟人工智能法》第六条项下高风险AI系统分类的指导草案。该草案旨在为AI系统的提供商、部署者及市场监管机构提供明确的分类标准，以确保在欧盟范围内执法的一致性。分类主要依据AI系统的预期用途，例如作…</div>
+        <div class="card-meta"><span>DataGuidance：Artificial Intelligence（网页）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">11</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture" target="_blank" rel="noopener">OpenAI模型证伪了离散几何中的一个核心猜想</a></div>
+        <div class="card-summary">OpenAI开发的人工智能模型成功解决了数学界悬而未决逾80年的&quot;单元距离问题&quot;，并由此推翻了离散几何领域的一个核心猜想。这一突破被视作人工智能驱动数学研究的里程碑事件，标志着AI在基础科学理论探索中取得了实质性进展。该…</div>
+        <div class="card-meta"><span>OpenAI：官网动态（RSS · 排除企业/客户案例）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">12</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection" target="_blank" rel="noopener">Google I/O 2026</a></div>
+        <div class="card-summary">在Google I/O 2026大会上，Google宣布了多项旨在让AI更普惠、更实用的更新。这些发布聚焦于提升人工智能的辅助能力，使其能够服务更广泛的用户群体。大会涵盖了AI在开发者工具、用户应用以及日常生活场景中的具体改进，强调通过技术…</div>
+        <div class="card-meta"><span>Google Blog：AI（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">13</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://twitter.com/karpathy/status/2056753169888334312" target="_blank" rel="noopener">安德烈·卡帕西加入Anthropic</a></div>
+        <div class="card-summary">AI领域知名专家安德烈·卡帕西于2026年5月19日宣布加入人工智能安全公司Anthropic。卡帕西此前曾是特斯拉自动驾驶AI负责人及OpenAI联合创始人，此次加盟标志着顶尖人才向AI安全与对齐研究领域的新一轮流动，进一步提升了Anth…</div>
+        <div class="card-meta"><span>Hacker News 热门（buzzing.cc 中文翻译）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">14</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.anthropic.com/news/anthropic-kpmg" target="_blank" rel="noopener">毕马威与Anthropic建立全球联盟，全面整合Claude AI模型</a></div>
+        <div class="card-summary">毕马威宣布与Anthropic建立全球联盟，将Claude人工智能模型全面整合至其核心业务与数字平台。此举将向毕马威全球超过27.6万名员工开放Claude访问权限，并率先应用于税务与法律等领域的客户工具开发。双方还将合作开发面向私募股权投…</div>
+        <div class="card-meta"><span>Anthropic：Newsroom（网页）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">15</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://x.com/kimmonismus/status/2058997271803674991" target="_blank" rel="noopener">苹果据称正使用定制版1.2T参数Google模型重塑下一代Siri</a></div>
+        <div class="card-summary">据报道，苹果为改造下一代Siri，正使用一个定制版、参数规模达1.2T的Google大模型作为其核心，这显著大于预估约300B参数的Gemini 3.5 Flash。该模型将驱动Siri的部分功能，其中简单查询预期会在本地设备运行。苹果面临…</div>
+        <div class="card-meta"><span>X：Kim (@kimmonismus)</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">16</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.ithome.com/0/954/759.htm" target="_blank" rel="noopener">面壁智能联合清华等开源中国首个基于华为昇腾训练的 1.58-bit 端侧大模型 BitCPM-CANN</a></div>
+        <div class="card-summary">None…</div>
+        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">17</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://x.com/rohanpaul_ai/status/2057833050692800926" target="_blank" rel="noopener">首个基于华为昇腾910B NPU全栈训练的1.58比特开源大模型BitCPM-CANN发布</a></div>
+        <div class="card-summary">ModelBest、清华大学与OpenBMB社区联合发布了BitCPM-CANN，这是全球首个完全基于华为昇腾910B NPU训练的开源1.58比特三元大模型。其核心创新在于采用仅含三种权重状态的极低比特量化技术，使模型内存占用相比BF16…</div>
+        <div class="card-meta"><span>X：Rohan Paul (@rohanpaul_ai)</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">18</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.ithome.com/0/954/124.htm" target="_blank" rel="noopener">网易有道&quot;子曰4&quot;多模态模型、语音合成模型全量开源</a></div>
+        <div class="card-summary">网易有道宣布将其&quot;子曰&quot;大模型4.0的多模态模型与语音合成模型面向全球全量开源。其中，多模态模型（27B参数）专注于教育场景，在处理高难度视觉数理问题上达到行业顶尖水平，纯文本中文数理难题准确率为81.4%。该模型通过思…</div>
+        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">19</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.ithome.com/0/953/717.htm" target="_blank" rel="noopener">智谱GLM-5.1高速版发布：刷新全球大模型API速度纪录</a></div>
+        <div class="card-summary">5月22日，智谱向部分企业客户推出了旗舰大模型GLM-5.1的高速版API&quot;GLM-5.1-highspeed&quot;。该版本输出速度达400 tokens/s，刷新了全球大模型API速度上限。关键突破在于，它首次在国产大模型…</div>
+        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">20</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.zhipuai.cn/zh/research/160" target="_blank" rel="noopener">ZCube：超大规模大模型推理的网络优化</a></div>
+        <div class="card-summary">针对超大规模大模型推理，ZCube网络架构通过取消Spine层、将Leaf交换机分组并全互联等创新设计，有效解决了推理网络的拥塞问题。该架构在集群实测中，实现了交换机与光模块资本支出减少33%、GPU平均推理吞吐提升15%，同时将首toke…</div>
+        <div class="card-meta"><span>智谱：研究（网页内嵌数据）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">21</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.ithome.com/0/952/354.htm" target="_blank" rel="noopener">地平线开源 HoloMotion-1 4 亿参数机器人小脑大模型，可实现舞蹈、健身、搬箱子等动作</a></div>
+        <div class="card-summary">地平线机器人实验室发布了其开源的人形机器人全身控制模型 HoloMotion-1。这是一个拥有 4 亿参数的&quot;小脑&quot;大模型，通过 MoE 稀疏激活与 KV-cache 推理机制，在端侧实现了约 300FPS 的实时推理能…</div>
+        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">22</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.ithome.com/0/952/336.htm" target="_blank" rel="noopener">Kimi最新融资获国资与央企加注，估值半年翻四倍</a></div>
+        <div class="card-summary">月之暗面旗下AI助手Kimi正在进行20亿美元新融资，国智投、中国移动等国资机构及央企已加入股东名单，该轮融资已进入收尾阶段。今年1月和2月，Kimi已密集完成3轮融资，累计融资超39亿美元（约376亿元人民币），最新估值相比去年11月已翻…</div>
+        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#4f46e5">
+      <div class="card-num">23</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.ithome.com/0/954/126.htm" target="_blank" rel="noopener">国家发改委：加快具身智能训练基础设施建设，让机器人不仅能上赛场，还能&quot;进工厂、进商场、进家庭&quot;</a></div>
+        <div class="card-summary">国家发改委在5月22日新闻发布会上表示，人形机器人在半程马拉松比赛中表现显著提升，速度更快、更灵活、更自主，参赛队伍从20余支增至百余支，完赛队伍从6支增至40余支，反映具身智能创新活力增强和产业规模扩大。下一步，发改委将加快具身智能训练基…</div>
+        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      </div>
+    </div></div>
+      </section>
+      <section class="domain-section" id="domain-未来制造" data-aos>
+        <div class="section-header" style="background:linear-gradient(135deg,#0891b222,#0891b211);border-left:4px solid #0891b2">
+          <h2>⚙️ 未来制造</h2>
+          <span class="count-badge" style="background:#0891b222;color:#0891b2">4 条</span>
+        </div>
+        <div class="card-grid">
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">01</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap" target="_blank" rel="noopener">回顾Google I/O 2026对话环节</a></div>
+        <div class="card-summary">在2026年Google I/O开发者大会上，对话环节聚焦于未来科技趋势。行业领导者围绕人工智能、量子计算、机器人学以及创造力等核心议题展开了深入探讨，旨在勾勒这些前沿领域的技术演进路径与发展蓝图。…</div>
+        <div class="card-meta"><span>Google Blog：AI（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">02</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture" target="_blank" rel="noopener">OpenAI模型证伪了离散几何中的一个核心猜想</a></div>
+        <div class="card-summary">OpenAI开发的人工智能模型成功解决了数学界悬而未决逾80年的&quot;单元距离问题&quot;，并由此推翻了离散几何领域的一个核心猜想。这一突破被视作人工智能驱动数学研究的里程碑事件，标志着AI在基础科学理论探索中取得了实质性进展。该…</div>
+        <div class="card-meta"><span>OpenAI：官网动态（RSS · 排除企业/客户案例）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">03</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.ithome.com/0/952/354.htm" target="_blank" rel="noopener">地平线开源 HoloMotion-1 4 亿参数机器人小脑大模型，可实现舞蹈、健身、搬箱子等动作</a></div>
+        <div class="card-summary">地平线机器人实验室发布了其开源的人形机器人全身控制模型 HoloMotion-1。这是一个拥有 4 亿参数的&quot;小脑&quot;大模型，通过 MoE 稀疏激活与 KV-cache 推理机制，在端侧实现了约 300FPS 的实时推理能…</div>
+        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      </div>
+    </div>
+    <div class="card" style="--accent:#0891b2">
+      <div class="card-num">04</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://www.ithome.com/0/954/126.htm" target="_blank" rel="noopener">国家发改委：加快具身智能训练基础设施建设，让机器人不仅能上赛场，还能&quot;进工厂、进商场、进家庭&quot;</a></div>
+        <div class="card-summary">国家发改委在5月22日新闻发布会上表示，人形机器人在半程马拉松比赛中表现显著提升，速度更快、更灵活、更自主，参赛队伍从20余支增至百余支，完赛队伍从6支增至40余支，反映具身智能创新活力增强和产业规模扩大。下一步，发改委将加快具身智能训练基…</div>
+        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      </div>
+    </div></div>
+      </section>
+      <section class="domain-section" id="domain-未来材料" data-aos>
+        <div class="section-header" style="background:linear-gradient(135deg,#05966922,#05966911);border-left:4px solid #059669">
+          <h2>🔬 未来材料</h2>
+          <span class="count-badge" style="background:#05966922;color:#059669">0 条</span>
+        </div>
+        <div class="card-grid"><p class="empty">今日暂无相关资讯</p></div>
+      </section>
+      <section class="domain-section" id="domain-未来能源" data-aos>
+        <div class="section-header" style="background:linear-gradient(135deg,#d9770622,#d9770611);border-left:4px solid #d97706">
+          <h2>⚡ 未来能源</h2>
+          <span class="count-badge" style="background:#d9770622;color:#d97706">1 条</span>
+        </div>
+        <div class="card-grid">
+    <div class="card" style="--accent:#d97706">
+      <div class="card-num">01</div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks" target="_blank" rel="noopener">谷歌DeepMind在亚太启动AI气候加速器</a></div>
+        <div class="card-summary">亚太地区经济增长迅速，但极易受到气候变化影响，且现有绿色技术发展速度跟不上环境风险的增长。为此，Google DeepMind宣布启动首届专注于&quot;AI for the Planet&quot;的加速器计划。该计划为期三个月，面向亚…</div>
+        <div class="card-meta"><span>Google DeepMind：Blog（RSS）</span></div>
+      </div>
+    </div></div>
+      </section>
+      <section class="domain-section" id="domain-未来空间" data-aos>
+        <div class="section-header" style="background:linear-gradient(135deg,#7c3aed22,#7c3aed11);border-left:4px solid #7c3aed">
+          <h2>🚀 未来空间</h2>
+          <span class="count-badge" style="background:#7c3aed22;color:#7c3aed">0 条</span>
+        </div>
+        <div class="card-grid"><p class="empty">今日暂无相关资讯</p></div>
+      </section>
+      <section class="domain-section" id="domain-未来健康" data-aos>
+        <div class="section-header" style="background:linear-gradient(135deg,#be185d22,#be185d11);border-left:4px solid #be185d">
+          <h2>🧬 未来健康</h2>
+          <span class="count-badge" style="background:#be185d22;color:#be185d">0 条</span>
+        </div>
+        <div class="card-grid"><p class="empty">今日暂无相关资讯</p></div>
+      </section>
+
+</main>
+
+<footer style="background:#0f172a;color:#94a3b8;text-align:center;padding:1.5rem;font-size:.78rem">
+  <p>国家未来产业每日晨报 · 中国信通院未来产业研究 · 仅供内部参考</p>
+  <p style="margin-top:.3rem;font-size:.68rem;opacity:.6">数据来源：AI HOT · 网络公开信息 · 自动聚合生成于 2026年5月26日 11:09</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {if(e.isIntersecting) e.target.classList.add('visible')});
+}, {threshold:0.05});
+document.querySelectorAll('[data-aos]').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
