@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>国家未来产业每日晨报 · 2026年5月26日</title>
+<title>未来产业每日晨报 · 2026年5月26日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -115,18 +115,33 @@ main{max-width:1200px;margin:0 auto;padding:1.5rem 1rem 3rem}
 
 /* PRIORITY section - slightly larger cards */
 .priority-section .card{border-left-width:4px}
+
+/* POLICY CARD */
+.policy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1rem}
+.policy-card{background:#fff;border-radius:var(--radius);padding:1.1rem 1.2rem;
+  box-shadow:var(--shadow);border-left:4px solid #be185d;transition:transform .2s}
+.policy-card:hover{transform:translateY(-2px)}
+.policy-meta{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.5rem}
+.policy-level{font-size:.68rem;font-weight:600;padding:.15rem .45rem;border-radius:6px}
+.policy-type{font-size:.65rem;background:#f1f5f9;padding:.1rem .35rem;border-radius:4px;color:#64748b}
+.policy-date{font-size:.65rem;color:#94a3b8;margin-left:auto}
+.policy-title{font-size:.9rem;font-weight:600;line-height:1.5;margin-bottom:.4rem}
+.policy-title a{color:#be185d}
+.policy-title a:hover{text-decoration:underline}
+.policy-summary{font-size:.78rem;color:#64748b;line-height:1.5;margin-bottom:.4rem}
+.policy-src{font-size:.7rem;color:#94a3b8}
 </style>
 </head>
 <body>
 
 <div class="hero">
   <div class="hero-tag">🏛️ 中国信通院 · 未来产业研究</div>
-  <h1>国家未来产业每日晨报</h1>
-  <div class="hero-sub">2026年5月26日 周二 · 更新于 13:08 · AI 智能聚合</div>
+  <h1>未来产业每日晨报</h1>
+  <div class="hero-sub">2026年5月26日 周二 · 更新于 13:21 · AI 智能聚合</div>
     <div class="hero-stats">
     <div class="stat"><div class="stat-num" style="color:#4ade80">10</div><div class="stat-label">地方动态</div></div>
     <div class="stat"><div class="stat-num" style="color:#fbbf24">11</div><div class="stat-label">选题参考</div></div>
-    <div class="stat"><div class="stat-num" style="color:#f87171">10</div><div class="stat-label">政策专报</div></div>
+    <div class="stat"><div class="stat-num" style="color:#f87171">12</div><div class="stat-label">政策专报</div></div>
     <div class="stat"><div class="stat-num" style="color:#60a5fa">10</div><div class="stat-label">国际视野</div></div>
     <div class="stat"><div class="stat-num" style="color:#c084fc">22</div><div class="stat-label">重点方向</div></div>
     <div class="stat"><div class="stat-num" style="color:#34d399">138</div><div class="stat-label">领域资讯</div></div>
@@ -355,95 +370,130 @@ main{max-width:1200px;margin:0 auto;padding:1.5rem 1rem 3rem}
   <!-- 政策专报 -->
   <section id="policy" class="section-wrapper" data-aos>
     <div class="section-header" style="background:linear-gradient(135deg,#fce7f322,#fce7f311);border-left:4px solid #be185d">
-      <h2>📋 政策专报</h2>
-      <span class="count-badge" style="background:#fce7f3;color:#be185d">10 条</span>
+      <h2>📋 各地未来产业政策文件</h2>
+      <span class="count-badge" style="background:#fce7f3;color:#be185d">12 条</span>
     </div>
-    <div class="card-grid">
-    <div class="card" style="--accent:#be185d">
-      <div class="card-num">01</div>
-      <div class="card-body">
-        <div class="card-title"><a href="https://www.ithome.com/0/954/126.htm" target="_blank" rel="noopener">国家发改委：加快具身智能训练基础设施建设，让机器人不仅能上赛场，还能&quot;进工厂、进商场、进家庭&quot;</a></div>
-        <div class="card-summary">国家发改委在5月22日新闻发布会上表示，人形机器人在半程马拉松比赛中表现显著提升，速度更快、更灵活、更自主，参赛队伍从20余支增至百余支，完赛队伍从6支增至40余支，反映具身智能创新活力增强和产业规模扩大。下一步，发改委将加快具身智能训练基…</div>
-        <div class="card-meta"><span>IT之家（RSS）</span></div>
+    <div class="policy-grid">
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#ef444422;color:#ef4444">📋 国家级</span>
+          <span class="policy-type">实施意见</span>
+          <span class="policy-date">2024-01-18</span>
+        </div>
+        <div class="policy-title"><a href="https://www.gov.cn/zhengce/zhengceku/202401/content_6929021.htm" target="_blank" rel="noopener">工业和信息化部等七部门关于推动未来产业创新发展的实施意见</a></div>
+        <div class="policy-summary">明确未来制造、未来信息、未来材料、未来能源、未来空间、未来健康六大方向，提出加强前瞻谋划部署、培育创新生态、强化要素保障等重点任务。</div>
+        <div class="policy-src">📌 国务院</div>
       </div>
-    </div>
-    <div class="card" style="--accent:#be185d">
-      <div class="card-num">02</div>
-      <div class="card-body">
-        <div class="card-title"><a href="https://x.com/OpenAI/status/2056823271774101907" target="_blank" rel="noopener">OpenAI推出长期算力保障服务</a></div>
-        <div class="card-summary">推出 OpenAI Guaranteed Capacity：一项新服务，让客户能够保障长期获取 OpenAI 算力。
-
-我们已在基础设施、合作伙伴关系和容量规划方面进行了长期投资，以帮助客户可靠地扩展。
-
-现在，Guaranteed Cap…</div>
-        <div class="card-meta"><span>X：OpenAI (@OpenAI)</span></div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#ef444422;color:#ef4444">📋 国家级</span>
+          <span class="policy-type">实施意见</span>
+          <span class="policy-date">2025-07-23</span>
+        </div>
+        <div class="policy-title"><a href="https://www.gov.cn/zhengce/zhengceku/202508/content_7035603.htm" target="_blank" rel="noopener">七部门关于推动脑机接口产业创新发展的实施意见</a></div>
+        <div class="policy-summary">脑机接口通过在脑与机器之间建立信息通道，实现生物智能与机器智能的协同交互。提出加强核心技术攻关、推动产品创新应用、培育产业生态等重点任务。</div>
+        <div class="policy-src">📌 国务院</div>
       </div>
-    </div>
-    <div class="card" style="--accent:#be185d">
-      <div class="card-num">03</div>
-      <div class="card-body">
-        <div class="card-title"><a href="https://www.ithome.com/0/952/463.htm" target="_blank" rel="noopener">前高管称微软 AI 布局失利，Copilot 付费使用率不足 3%</a></div>
-        <div class="card-summary">微软前高管马特·韦洛索批评称，尽管微软与OpenAI合作在2023至2025年间获得约300亿美元营收，但相关成本高达1000亿美元，盈利前景不明。他指出，微软在AI布局上存在多项失误，包括押注必应搜索AI转型未增市场份额、Copilot付…</div>
-        <div class="card-meta"><span>IT之家（RSS）</span></div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#f59e0b22;color:#f59e0b">📋 省级</span>
+          <span class="policy-type">若干措施</span>
+          <span class="policy-date">2025-09-17</span>
+        </div>
+        <div class="policy-title"><a href="https://www.shanghai.gov.cn/nw12344/20251011/6b29e980fd8741eea2b9408b2877019c.html" target="_blank" rel="noopener">上海出台措施加快布局未来产业：前沿技术创新与未来产业发展</a></div>
+        <div class="policy-summary">上海市政府办公厅印发《关于加快推动前沿技术创新与未来产业发展的若干措施》，建立健全未来产业发展和战略性新兴产业接力培育推进机制，有效期至2030年。</div>
+        <div class="policy-src">📌 上海市政府</div>
       </div>
-    </div>
-    <div class="card" style="--accent:#be185d">
-      <div class="card-num">04</div>
-      <div class="card-body">
-        <div class="card-title"><a href="https://claude.com/blog/how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book" target="_blank" rel="noopener">Anthropic销售负责人如何利用Claude Cowork管理4000个客户账户</a></div>
-        <div class="card-summary">Anthropic美国中端市场业务负责人Travis Bryant利用Claude Cowork自动化销售管理工作。该工具帮助他高效完成客户倾向性评分、每日客户简报准备及每周销售预测报告生成，每晚自动处理4000个账户数据，替代了以往跨部门…</div>
-        <div class="card-meta"><span>Claude：Blog（网页）</span></div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#3b82f622;color:#3b82f6">📋 市级</span>
+          <span class="policy-type">实施方案</span>
+          <span class="policy-date">2026-04-23</span>
+        </div>
+        <div class="policy-title"><a href="https://www.nanjing.gov.cn/zdgk/202604/t20260430_5833648.html" target="_blank" rel="noopener">南京市委市政府印发加快培育发展未来产业实施方案</a></div>
+        <div class="policy-summary">为贯彻国家十五五规划建议，加快培育发展未来产业，根据工信部等七部门实施意见，南京出台地方未来产业培育实施方案，聚焦量子科技、人工智能等方向。</div>
+        <div class="policy-src">📌 南京市政府</div>
       </div>
-    </div>
-    <div class="card" style="--accent:#be185d">
-      <div class="card-num">05</div>
-      <div class="card-body">
-        <div class="card-title"><a href="https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html" target="_blank" rel="noopener">Claude Code的HTML输出：非凡的有效性</a></div>
-        <div class="card-summary">Claude Code团队正从Markdown转向HTML作为主要输出格式。Markdown虽简洁，但在信息密度、阅读性、分享和交互方面存在局限。HTML能支持表格、CSS样式、SVG图表和JavaScript交互，提供更清晰的视觉结构和高…</div>
-        <div class="card-meta"><span>Claude：Blog（网页）</span></div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#f59e0b22;color:#f59e0b">📋 省级</span>
+          <span class="policy-type">行动方案</span>
+          <span class="policy-date">2025-04-23</span>
+        </div>
+        <div class="policy-title"><a href="https://www.jiangxi.gov.cn/jxsrmzf/zxfb/pc/content/content_1878313846126641152.html" target="_blank" rel="noopener">江西省未来产业培育发展行动方案（2024-2026年）</a></div>
+        <div class="policy-summary">中共江西省委办公厅、江西省人民政府办公厅联合印发，系统布局未来产业培育发展路径，明确重点领域、发展目标和保障措施。</div>
+        <div class="policy-src">📌 江西省政府</div>
       </div>
-    </div>
-    <div class="card" style="--accent:#be185d">
-      <div class="card-num">06</div>
-      <div class="card-body">
-        <div class="card-title"><a href="https://www.tomtunguz.com/spacex-s1-analysis" target="_blank" rel="noopener">SpaceX的无限野心：AI企业集团</a></div>
-        <div class="card-summary">SpaceX在提交S-1文件后，展现为一家AI时代的企业集团。公司由三大业务构成：Starlink（星链）、太空业务与AI业务。2025年总营收达187亿美元。其中，星链是绝对的核心与现金引擎，贡献了61%的营收并实现39%的营业利润率。太…</div>
-        <div class="card-meta"><span>Tomer Tunguz 博客（VC 分析）</span></div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#f59e0b22;color:#f59e0b">📋 省级</span>
+          <span class="policy-type">行动方案</span>
+          <span class="policy-date">2026-03-09</span>
+        </div>
+        <div class="policy-title"><a href="https://www.suqian.gov.cn/cnsq/kjzc/202603/c462d752b617446190c239b71ab511aa.shtml" target="_blank" rel="noopener">江苏省脑机接口产业创新发展行动方案</a></div>
+        <div class="policy-summary">省工信厅等九部门联合印发，落实工信部等七部门脑机接口实施意见，推动江苏省脑机接口产业高质量发展。</div>
+        <div class="policy-src">📌 江苏省工信厅</div>
       </div>
-    </div>
-    <div class="card" style="--accent:#be185d">
-      <div class="card-num">07</div>
-      <div class="card-body">
-        <div class="card-title"><a href="https://x.com/GeminiApp/status/2057500470147698936" target="_blank" rel="noopener">Gemini每日简报助你高效规划一天</a></div>
-        <div class="card-summary">用Daily Brief开启高效一天。
-Gemini现在能主动将最重要的事项整理成易于理解的待办清单，让你在早餐结束前就为一天做好准备。…</div>
-        <div class="card-meta"><span>X：Gemini (@GeminiApp)</span></div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#3b82f622;color:#3b82f6">📋 市级</span>
+          <span class="policy-type">若干措施</span>
+          <span class="policy-date">2026-05-20</span>
+        </div>
+        <div class="policy-title"><a href="https://kfqgw.beijing.gov.cn/zwgkkfq/2024zcwj/202605/t20260520_4659308.html" target="_blank" rel="noopener">北京市关于加快推动脑机接口技术和产业创新发展的若干措施</a></div>
+        <div class="policy-summary">北京经开区发布脑机接口产业创新平台、创新载体建设项目认定及支持政策，贯彻落实京技管发〔2026〕2号文件要求。</div>
+        <div class="policy-src">📌 北京经开区</div>
       </div>
-    </div>
-    <div class="card" style="--accent:#be185d">
-      <div class="card-num">08</div>
-      <div class="card-body">
-        <div class="card-title"><a href="https://www.sohu.com/a/1026678598_122576210" target="_blank" rel="noopener">中国量子科技引美国焦虑：若继续突破2027年将引爆新一轮科技革命</a></div>
-        <div class="card-summary">美中经济与安全审查委员会最新报告指出，中国在量子计算领域的持续突破将带来不可逆的战略优势。…</div>
-        <div class="card-meta"><span>2026年5月22日</span><span>搜狐</span></div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#3b82f622;color:#3b82f6">📋 市级</span>
+          <span class="policy-type">行动方案</span>
+          <span class="policy-date">2026-01-13</span>
+        </div>
+        <div class="policy-title"><a href="https://www.hangzhou.gov.cn/col/col1229063385/art/2026/art_398d6d71e58547a9895df608ed2c6d5e.html" target="_blank" rel="noopener">杭州市加快发展人工智能终端产业行动方案（2026-2027年）</a></div>
+        <div class="policy-summary">人工智能终端作为AI软硬件集成创新的关键载体，将成为人工智能核心产业发展重点方向。杭州明确2026-2027年发展路径和目标。</div>
+        <div class="policy-src">📌 杭州市政府</div>
       </div>
-    </div>
-    <div class="card" style="--accent:#be185d">
-      <div class="card-num">09</div>
-      <div class="card-body">
-        <div class="card-title"><a href="https://finance.sina.com.cn/jjxw/2026-05-18/doc-inhyfsvc3290791.shtml" target="_blank" rel="noopener">国家电网近100亿采购具身智能设备：年采购8500台，总投资68亿元</a></div>
-        <div class="card-summary">国家电网印发《2026年具身智能发展规划》，聚焦电力巡检、带电作业、应急救援、仓储物流四大场景。…</div>
-        <div class="card-meta"><span>2026年5月18日</span><span>新浪财经</span></div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#3b82f622;color:#3b82f6">📋 市级</span>
+          <span class="policy-type">地方法规</span>
+          <span class="policy-date">2026-05-01</span>
+        </div>
+        <div class="policy-title"><a href="https://finance.sina.com.cn/money/bank/2026-05-15/doc-inhxyimc9377247.shtml" target="_blank" rel="noopener">《杭州市促进具身智能机器人产业发展条例》正式施行</a></div>
+        <div class="policy-summary">全国首部聚焦具身智能机器人领域的地方性法规，5月1日起施行。为具身智能机器人产业发展提供法治保障，护航科技创新。</div>
+        <div class="policy-src">📌 杭州市人大</div>
       </div>
-    </div>
-    <div class="card" style="--accent:#be185d">
-      <div class="card-num">10</div>
-      <div class="card-body">
-        <div class="card-title"><a href="https://news.cctv.cn/2026/04/11/ARTIlXUtGPuhEYFvuhmOPlsd260411.shtml" target="_blank" rel="noopener">我国氢能产业加速打开万亿新空间：超20省&quot;十五五&quot;将氢能列为重点方向</a></div>
-        <div class="card-summary">政府工作报告提出培育氢能、绿色燃料等新增长点，前两月全国氢能备案项目82个，新疆库车等标志性项目投产。…</div>
-        <div class="card-meta"><span>2026年4月11日</span><span>央视网</span></div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#f59e0b22;color:#f59e0b">📋 省级</span>
+          <span class="policy-type">产业规划</span>
+          <span class="policy-date">2026-02-13</span>
+        </div>
+        <div class="policy-title"><a href="http://fgw.shandong.gov.cn/art/2026/2/13/art_91562_10485675.html" target="_blank" rel="noopener">山东省：未来产业2026年或迎破茧时刻</a></div>
+        <div class="policy-summary">山东省发改委发布，从中央政治局集体学习聚焦未来产业到部委地方积极规划，提出加大重点领域关键核心技术攻关力度，建立未来产业投入增长和风险分担机制。</div>
+        <div class="policy-src">📌 山东省发改委</div>
       </div>
-    </div></div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#ef444422;color:#ef4444">📋 国家级</span>
+          <span class="policy-type">政策部署</span>
+          <span class="policy-date">2026-01-21</span>
+        </div>
+        <div class="policy-title"><a href="http://www2.xinhuanet.com/fortune/20260121/ee33764d53b04401864d9fd7306eb099/c.html" target="_blank" rel="noopener">国家未来产业先导区建设：工信部支持地方因地制宜建设</a></div>
+        <div class="policy-summary">工信部副部长张云明介绍，面向十五五，支持地方因地制宜建设一批未来产业先导区，加大政府投资基金投资力度，在全国范围统筹布局。</div>
+        <div class="policy-src">📌 工信部/新华网</div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-meta">
+          <span class="policy-level" style="background:#8b5cf622;color:#8b5cf6">📋 全国</span>
+          <span class="policy-type">政策梳理</span>
+          <span class="policy-date">2026-04-07</span>
+        </div>
+        <div class="policy-title"><a href="https://www.ccidmedia.com/show-7-1203-1.html" target="_blank" rel="noopener">各地2026年政府工作报告中的未来产业布局</a></div>
+        <div class="policy-summary">传媒观察梳理各地2026年政府工作报告，广东、江苏、山东、浙江、四川等多省将未来产业纳入重点布局，涵盖AI、机器人、低空经济等赛道。</div>
+        <div class="policy-src">📌 中国工信新闻网</div>
+      </div></div>
   </section>
 
   <!-- 国际视野 -->
@@ -992,8 +1042,8 @@ https：//developers.openai.com/code…</div>
 </main>
 
 <footer style="background:#0f172a;color:#94a3b8;text-align:center;padding:1.5rem;font-size:.78rem">
-  <p>国家未来产业每日晨报 · 中国信通院未来产业研究 · 仅供内部参考</p>
-  <p style="margin-top:.3rem;font-size:.68rem;opacity:.6">数据来源：AI HOT · 网络公开信息 · 自动聚合生成于 2026年5月26日 13:08</p>
+  <p>未来产业每日晨报 · 中国信通院未来产业研究 · 仅供内部参考</p>
+  <p style="margin-top:.3rem;font-size:.68rem;opacity:.6">数据来源：AI HOT · 网络公开信息 · 自动聚合生成于 2026年5月26日 13:21</p>
 </footer>
 
 <script>
